@@ -15,13 +15,20 @@ class Spaceship(pygame.sprite.Sprite):
     def update(self, left, right, up, down):
         if left:
             self.xvel = -12
-
         if right:
             self.xvel = 12
         if up:
             self.yvel = -12
         if down:
             self.yvel = 12
+        if shoot_left:
+            
+        if shoot_right:
+
+        if shoot_up:
+
+        if shoot_down:
+
         if not (left or right):
             self.xvel = 0
         if not (down or up):
@@ -38,7 +45,7 @@ pygame.display.set_caption("Asteroids")
 sky = scale(pygame.image.load("/home/asp-159/hakaton/images/photo_2020-01-25_14-17-55.jpg"), (1280, 1024))
 end = scale(pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg"), (1280, 1024))
 # создаем сыр в точке 400 400
-ship = Spaceship(400, 400)
+ship = Spaceship(640, 512)
 
 
 # заведем переменные, чтобы помнить, какие клавиши нажаты
@@ -46,6 +53,7 @@ left = False
 right = False
 down = False
 up = False
+lives = 6
 
 
 while True:
@@ -72,7 +80,10 @@ while True:
             up = False
         if e.type == pygame.KEYUP and e.key == pygame.K_s:
             down = False
+        if e.type == pygame.KEYDOWN and e.key == pygame.K_4:
 
+        if lives == 0:
+            game_over()
         if e.type == pygame.QUIT:
             raise SystemExit("QUIT")
     # рисуем фон
