@@ -46,11 +46,9 @@ pygame.init()
 screen = pygame.display.set_mode((1280, 1024))
 pygame.display.set_caption("Gamer")
 
-sky = scale(pygame.image.load(
-    "/home/asp-159/hakaton/images/photo_2020-01-25_14-17-55.jpg"), (1280, 1024))
-end = scale(pygame.image.load(
-    "/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg"), (1280, 1024))
-door_up = pygame.image.load("/home/asp-159/hakaton/images/Door(up, down).png")
+sky = scale(pygame.image.load("hakaton/images/walls.jpg"), (1280, 1024))
+end = scale(pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg"), (1280, 1024))
+door_up = pygame.image.load("hakaton/images/Door(up, down).png")
 # создаем сыр в точке 400 400
 ship = Spaceship(640, 512)
 
