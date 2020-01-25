@@ -22,13 +22,13 @@ class Spaceship(pygame.sprite.Sprite):
         if down:
             self.yvel = 12
         if shoot_left:
-            
+            pass
         if shoot_right:
-
+            pass
         if shoot_up:
-
+            pass
         if shoot_down:
-
+            pass
         if not (left or right):
             self.xvel = 0
         if not (down or up):
