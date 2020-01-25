@@ -37,7 +37,7 @@ pygame.display.set_caption("Asteroids")
 
 sky = scale(pygame.image.load("/home/asp-159/hakaton/images/photo_2020-01-25_14-17-55.jpg"), (1280, 1024))
 end = scale(pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg"), (1280, 1024))
-# создаем корабль в точке 400 400
+# создаем сыр в точке 400 400
 ship = Spaceship(400, 400)
 
 
@@ -75,12 +75,12 @@ while True:
 
         if e.type == pygame.QUIT:
             raise SystemExit("QUIT")
-    # рисуем небо
+    # рисуем фон
     screen.blit(sky, (0, 0))
 
-    # перемещаем корабль
+    # перемещаем сыр
     ship.update(left, right, up, down)
-    # просим корабль нарисоваться
+    # просим сыр нарисоваться
     ship.draw(screen)
 
     pygame.display.update()
