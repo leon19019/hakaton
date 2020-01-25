@@ -14,14 +14,14 @@ class Spaceship(pygame.sprite.Sprite):
         screen.blit(self.image, (self.rect.x, self.rect.y))
     def update(self, left, right, up, down):
         if left:
-            self.xvel = -9
+            self.xvel = -10
 
         if right:
-            self.xvel = 9
+            self.xvel = 10
         if up:
-            self.yvel = -9
+            self.yvel = -10
         if down:
-            self.yvel = 9
+            self.yvel = 10
         if not (left or right):
             self.xvel = 0
         if not (down or up):
