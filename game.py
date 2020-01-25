@@ -75,8 +75,6 @@ while True:
 
         if e.type == pygame.QUIT:
             raise SystemExit("QUIT")
-        if e.type == pygame.QUIT:
-            raise SystemExit("QUIT")
     # рисуем небо
     screen.blit(sky, (0, 0))
 
