@@ -14,14 +14,14 @@ class Spaceship(pygame.sprite.Sprite):
         screen.blit(self.image, (self.rect.x, self.rect.y))
     def update(self, left, right, up, down):
         if left:
-            self.xvel = -10
+            self.xvel = -12
 
         if right:
-            self.xvel = 10
+            self.xvel = 12
         if up:
-            self.yvel = -10
+            self.yvel = -12
         if down:
-            self.yvel = 10
+            self.yvel = 12
         if not (left or right):
             self.xvel = 0
         if not (down or up):
@@ -51,28 +51,30 @@ up = False
 while True:
     for e in pygame.event.get():
         # если нажата клавиша - меняем переменную
-        if e.type == pygame.KEYDOWN and e.key == pygame.K_LEFT:
+        if e.type == pygame.KEYDOWN and e.key == pygame.K_a:
             left = True
-        if e.type == pygame.KEYDOWN and e.key == pygame.K_RIGHT:
+        if e.type == pygame.KEYDOWN and e.key == pygame.K_d:
             right = True
 
         # если отпущена клавиша - меняем переменную
-        if e.type == pygame.KEYUP and e.key == pygame.K_LEFT:
+        if e.type == pygame.KEYUP and e.key == pygame.K_a:
             left = False
-        if e.type == pygame.KEYUP and e.key == pygame.K_RIGHT:
+        if e.type == pygame.KEYUP and e.key == pygame.K_d:
             right = False
 
-        if e.type == pygame.KEYDOWN and e.key == pygame.K_UP:
+        if e.type == pygame.KEYDOWN and e.key == pygame.K_w:
             up = True
-        if e.type == pygame.KEYDOWN and e.key == pygame.K_DOWN:
+        if e.type == pygame.KEYDOWN and e.key == pygame.K_s:
             down = True
 
         # если отпущена клавиша - меняем переменную
-        if e.type == pygame.KEYUP and e.key == pygame.K_UP:
+        if e.type == pygame.KEYUP and e.key == pygame.K_w:
             up = False
-        if e.type == pygame.KEYUP and e.key == pygame.K_DOWN:
+        if e.type == pygame.KEYUP and e.key == pygame.K_s:
             down = False
 
+        if e.type == pygame.QUIT:
+            raise SystemExit("QUIT")
         if e.type == pygame.QUIT:
             raise SystemExit("QUIT")
     # рисуем небо
