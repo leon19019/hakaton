@@ -28,13 +28,15 @@ class Spaceship(pygame.sprite.Sprite):
             self.yvel = 0
         self.rect.x += self.xvel
         self.rect.y += self.yvel
+    def game_over():
+        screen.blit(end, (0, 0)) 
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 1024))
 pygame.display.set_caption("Asteroids")
 
 sky = scale(pygame.image.load("/home/asp-159/hakaton/images/photo_2020-01-25_14-17-55.jpg"), (1280, 1024))
-end = scale(pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg", (1280, 1024))
+end = scale(pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_15-38-15.jpg"), (1280, 1024))
 # создаем корабль в точке 400 400
 ship = Spaceship(400, 400)
 
@@ -44,8 +46,7 @@ left = False
 right = False
 down = False
 up = False
-def game_over:
-    screen.blit(end, (0, 0)) 
+
 
 while True:
     for e in pygame.event.get():
