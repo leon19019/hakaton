@@ -7,8 +7,7 @@ class Spaceship(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         self.rect = pygame.Rect(x, y, 150, 150)
-        self.image = scale(pygame.image.load(
-            "/home/asp-159/hakaton/images/photo_2020-01-25_13-40-53.jpg"), (150, 150))
+        self.image = scale(pygame.image.load("hakaton/images/photo_2020-01-25_13-40-53.jpg"), (150, 150))
         self.xvel = 0
         self.yvel = 0
 
@@ -45,7 +44,7 @@ class Spaceship(pygame.sprite.Sprite):
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 1024))
-pygame.display.set_caption("Asteroids")
+pygame.display.set_caption("Gamer")
 
 sky = scale(pygame.image.load(
     "/home/asp-159/hakaton/images/photo_2020-01-25_14-17-55.jpg"), (1280, 1024))
