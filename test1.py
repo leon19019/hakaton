@@ -5,7 +5,7 @@ import os
 #class сыр:
     #pass
 
-p1Paddle = pygame.image.load("/home/asp-159/Загрузки/Telegram Desktop/photo_2020-01-25_13-09-10.jpg")
+p1Paddle = pygame.image.load("/home/asp-159/hakaton/images/photo_2020-01-25_13-40-53.jpg")
 x_velocity = 0
 y_coord = 0
 no_position = [x_velocity,y_coord]
