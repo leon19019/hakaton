@@ -5,7 +5,7 @@ import os
 #class сыр:
     #pass
 
-p1Paddle = pygame.image.load("/home/asp-159/hakaton/images/photo_2020-01-25_13-40-53.jpg")
+p1Paddle = pygame.image.load("hakaton/images/photo_2020-01-25_13-40-53.jpg")
 x_velocity = 0
 y_coord = 0
 no_position = [x_velocity,y_coord]
@@ -13,7 +13,7 @@ no_position = [x_velocity,y_coord]
 pygame.init()
 screen = pygame.display.set_mode((1280, 1024))
 clock = pygame.time.Clock()
-background_image = pygame.image.load('/home/asp-159/hakaton/images/photo_2020-01-25_13-00-32.jpg')
+background_image = pygame.image.load('hakaton/images/photo_2020-01-25_13-00-32.jpg')
 class gamer:
     pass
 
