@@ -103,7 +103,7 @@ while True:
     # рисуем фон
     screen.blit(sky, (0, 0))
     screen.blit(door_up, (100, 0))
-    screen.blit(door_down, (-100, 0))
+    screen.blit(door_down, (, 0))
     # перемещаем сыр
     ship.update(left, right, up, down)
     # просим сыр нарисоваться
