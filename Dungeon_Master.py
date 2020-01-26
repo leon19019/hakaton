@@ -1,7 +1,7 @@
 import pygame
 from pygame.transform import scale
 #from df import gamer
-
+import time
 
 class Spaceship(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -44,6 +44,7 @@ class Spaceship(pygame.sprite.Sprite):
             screen.blit(m_4, (527, 130))
             screen.blit(m_5, (370, 483))
             screen.blit(m_1, (212, 192))
+
         if (self.rect.x <= 630 or self.rect.x >= 670) and self.rect.y >= 670:
             self.rect.x = 550
             self.rect.y = -0
@@ -52,7 +53,7 @@ class Spaceship(pygame.sprite.Sprite):
             screen.blit(m_4, (527, 130))
             screen.blit(m_5, (370, 483))
             screen.blit(m_1, (212, 192))
-
+        
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 
