@@ -35,6 +35,14 @@ class Spaceship(pygame.sprite.Sprite):
             self.xvel = 0
         if not (down or up):
             self.yvel = 0
+        if self.rect.x <= 100:
+            self.rect.x = 100
+        if self.rect.x >= 1020:
+            self.rect.x = 1020
+        if self.rect.y <= 40:
+            self.rect.y = 40
+        if self.rect.y >= 780:
+            self.rect.y = 780
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 
