@@ -7,7 +7,7 @@ class Spaceship(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         self.rect = pygame.Rect(x, y, 150, 150)
-        self.image = scale(pygame.image.load("images/cheese_v2.png"), (150, 150))
+        self.image = scale(pygame.image.load("images/Male.png"), (200, 280))
         self.xvel = 0
         self.yvel = 0
 
@@ -16,13 +16,13 @@ class Spaceship(pygame.sprite.Sprite):
 
     def update(self, left, right, up, down):
         if left:
-            self.xvel = -15
+            self.xvel = -20
         if right:
-            self.xvel = 15
+            self.xvel = 20
         if up:
-            self.yvel = -15
+            self.yvel = -20
         if down:
-            self.yvel = 15
+            self.yvel = 20
         #if shoot_left:
             #pass
         #if shoot_right:
@@ -35,14 +35,14 @@ class Spaceship(pygame.sprite.Sprite):
             self.xvel = 0
         if not (down or up):
             self.yvel = 0
-        if self.rect.x <= 100:
-            self.rect.x = 100
-        if self.rect.x >= 1020:
-            self.rect.x = 1020
-        if self.rect.y <= 40:
-            self.rect.y = 40
-        if self.rect.y >= 780:
-            self.rect.y = 780
+        if self.rect.x <= 50:
+            self.rect.x = 50
+        if self.rect.x >= 1040:
+            self.rect.x = 1040
+        if self.rect.y <= -20:
+            self.rect.y = -20
+        if self.rect.y >= 670:
+            self.rect.y = 670
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 
