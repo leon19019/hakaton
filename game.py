@@ -56,7 +56,8 @@ pygame.display.set_caption("Gamer")
 
 sky = scale(pygame.image.load("images/walls.jpg"), (1280, 1024))
 end = scale(pygame.image.load("images/directed_by.jpg"), (1280, 1024))
-door_up = pygame.image.load("images/Door(up, down).png")
+door_up = pygame.image.load("images/Door_up.png")
+door_down = pygame.image.load("images/Door_down.png")
 # создаем сыр в точке 400 400
 ship = Spaceship(640, 512)
 
@@ -102,6 +103,7 @@ while True:
     # рисуем фон
     screen.blit(sky, (0, 0))
     screen.blit(door_up, (100, 0))
+    screen.blit(door_down, (-100, 0))
     # перемещаем сыр
     ship.update(left, right, up, down)
     # просим сыр нарисоваться
