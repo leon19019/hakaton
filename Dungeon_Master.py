@@ -1,5 +1,6 @@
 import pygame
 from pygame.transform import scale
+from df import gamer
 
 
 class Spaceship(pygame.sprite.Sprite):
