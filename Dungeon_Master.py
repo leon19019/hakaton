@@ -2,6 +2,7 @@ import pygame
 from pygame.transform import scale
 #from df import gamer
 import time
+import random
 
 class Spaceship(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -39,20 +40,23 @@ class Spaceship(pygame.sprite.Sprite):
         if (self.rect.x <= 630 or self.rect.x >= 670) and self.rect.y <= -10:
             self.rect.x = 550
             self.rect.y = 650
-            screen.blit(m_2, (1196, 278))
-            screen.blit(m_3, (848, 495))
-            screen.blit(m_4, (527, 130))
-            screen.blit(m_5, (370, 483))
-            screen.blit(m_1, (212, 192))
-
+            number = 1
+            for i in range(number):
+                num = random.randint(1,5)
+                m = pygame.image.load('images/m-'+str(num)+'.png')
+                x = random.randint(1,500)
+                y = random.randint(1,500)
+                screen.blit(m, (x,y))
         if (self.rect.x <= 630 or self.rect.x >= 670) and self.rect.y >= 670:
             self.rect.x = 550
             self.rect.y = -0
-            screen.blit(m_2, (1196, 278))
-            screen.blit(m_3, (848, 495))
-            screen.blit(m_4, (527, 130))
-            screen.blit(m_5, (370, 483))
-            screen.blit(m_1, (212, 192))
+            number = 1
+            for i in range(number):
+                num = random.randint(1,5)
+                m = pygame.image.load('images/m-'+str(num)+'.png')
+                x = random.randint(1,500)
+                y = random.randint(1,500)
+                screen.blit(m, (x,y))
         
         self.rect.x += self.xvel
         self.rect.y += self.yvel
