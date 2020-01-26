@@ -52,7 +52,7 @@ class Spaceship(pygame.sprite.Sprite):
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 1024))
-pygame.display.set_caption("Gamer")
+pygame.display.set_caption("Dungeon Master")
 
 sky = scale(pygame.image.load("images/walls.jpg"), (1280, 1024))
 end = scale(pygame.image.load("images/directed_by.jpg"), (1280, 1024))
