@@ -18,19 +18,11 @@ class Spaceship(pygame.sprite.Sprite):
         if left:
             self.xvel = -20
         if right:
-            self.xvel = 20
+            self.xvel = 20  
         if up:
             self.yvel = -20
         if down:
             self.yvel = 20
-        #if shoot_left:
-            #pass
-        #if shoot_right:
-            #pass
-        #if shoot_up:
-            #pass
-        #if shoot_down:
-            # pass
         if not (left or right):
             self.xvel = 0
         if not (down or up):
@@ -43,6 +35,15 @@ class Spaceship(pygame.sprite.Sprite):
             self.rect.y = -20
         if self.rect.y >= 670:
             self.rect.y = 670
+        if (self.rect.x <= 630 or self.rect.x >= 670) and self.rect.y < -10:
+            self.rect.x = 550
+            self.rect.y = 670 
+            screen.blit(m_2, (1196, 278))
+            screen.blit(m_3, (848, 495))
+            screen.blit(m_4, (527, 130))
+            screen.blit(m_5, (370, 483))
+            screen.blit(m_1, (212, 192))
+                
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 
@@ -58,6 +59,11 @@ sky = scale(pygame.image.load("images/walls.jpg"), (1280, 1024))
 end = scale(pygame.image.load("images/directed_by.jpg"), (1280, 1024))
 door_up = pygame.image.load("images/Door_up.png")
 door_down = pygame.image.load("images/Door_down.png")
+m_1 = pygame.image.load("images/m-1.png")
+m_2 = pygame.image.load("images/M-2.png")
+m_3 = pygame.image.load("images/m-3.png")
+m_4 = pygame.image.load("images/m-4.png")
+m_5 = pygame.image.load("images/m-5.png")
 # создаем сыр в точке 400 400
 ship = Spaceship(640, 512)
 
@@ -68,6 +74,7 @@ right = False
 down = False
 up = False
 lives = 6
+go_door_up = False
 
 
 while True:
