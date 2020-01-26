@@ -73,11 +73,9 @@ m_2 = pygame.image.load("images/m-2.png")
 m_3 = pygame.image.load("images/m-3.png")
 m_4 = pygame.image.load("images/m-4.png")
 m_5 = pygame.image.load("images/m-5.png")
-# создаем сыр в точке 400 400
 ship = Spaceship(640, 512)
 
 
-# заведем переменные, чтобы помнить, какие клавиши нажаты
 left = False
 right = False
 down = False
@@ -88,13 +86,11 @@ go_door_up = False
 
 while True:
     for e in pygame.event.get():
-        # если нажата клавиша - меняем переменную
         if e.type == pygame.KEYDOWN and e.key == pygame.K_a:
             left = True
         if e.type == pygame.KEYDOWN and e.key == pygame.K_d:
             right = True
 
-        # если отпущена клавиша - меняем переменную
         if e.type == pygame.KEYUP and e.key == pygame.K_a:
             left = False
         if e.type == pygame.KEYUP and e.key == pygame.K_d:
@@ -105,7 +101,6 @@ while True:
         if e.type == pygame.KEYDOWN and e.key == pygame.K_s:
             down = True
 
-        # если отпущена клавиша - меняем переменную
         if e.type == pygame.KEYUP and e.key == pygame.K_w:
             up = False
         if e.type == pygame.KEYUP and e.key == pygame.K_s:
@@ -116,13 +111,10 @@ while True:
             game_over()
         if e.type == pygame.QUIT:
             raise SystemExit("QUIT")
-    # рисуем фон
     screen.blit(sky, (0, 0))
     screen.blit(door_up, (100, 0))
     screen.blit(door_down, (-100, 0))
-    # перемещаем сыр
     ship.update(left, right, up, down)
-    # просим сыр нарисоваться
     ship.draw(screen)
 
     pygame.display.update()
